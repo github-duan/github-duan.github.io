@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 墨云晟朗</title>
+  <title>mysql学习总结 | 墨云晟朗</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="墨云晟朗">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="欢迎来到我的博客，本篇文章为学习mysql过程中的总结，如有不足望请见谅 数据库的基本介绍数据库概述：数据库:是以特定的结构批量存储数据的软件其发展历史:网状数据库 –&amp;gt; 层次数据库 –&amp;gt; 关系数据库,而我们常使用的数据库为关系数据库数据库的逻辑结构为: Server(服务器) –&amp;gt; Database(数据库) –&amp;gt; Table(表) –&amp;gt; Row(行) –&amp;gt;">
+<meta name="keywords" content="Mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql学习总结">
+<meta property="og:url" content="http://yoursite.com/2018/12/09/mysql学习总结/index.html">
 <meta property="og:site_name" content="墨云晟朗">
+<meta property="og:description" content="欢迎来到我的博客，本篇文章为学习mysql过程中的总结，如有不足望请见谅 数据库的基本介绍数据库概述：数据库:是以特定的结构批量存储数据的软件其发展历史:网状数据库 –&amp;gt; 层次数据库 –&amp;gt; 关系数据库,而我们常使用的数据库为关系数据库数据库的逻辑结构为: Server(服务器) –&amp;gt; Database(数据库) –&amp;gt; Table(表) –&amp;gt; Row(行) –&amp;gt;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-09T13:19:46.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="墨云晟朗">
+<meta name="twitter:title" content="mysql学习总结">
+<meta name="twitter:description" content="欢迎来到我的博客，本篇文章为学习mysql过程中的总结，如有不足望请见谅 数据库的基本介绍数据库概述：数据库:是以特定的结构批量存储数据的软件其发展历史:网状数据库 –&amp;gt; 层次数据库 –&amp;gt; 关系数据库,而我们常使用的数据库为关系数据库数据库的逻辑结构为: Server(服务器) –&amp;gt; Database(数据库) –&amp;gt; Table(表) –&amp;gt; Row(行) –&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="墨云晟朗" type="application/atom+xml">
   
@@ -154,36 +159,72 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-mysql学习总结" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/09/mysql学习总结/" class="archive-article-date">
-  	<time datetime="2018-12-09T11:03:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/09/mysql学习总结/">mysql学习总结</a>
+    <h1 class="article-title" itemprop="name">
+      mysql学习总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/12/09/mysql学习总结/" class="archive-article-date">
+  	<time datetime="2018-12-09T11:03:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来到我的博客，本篇文章为学习mysql过程中的总结，如有不足望请见谅</p>
+<h1 id="数据库的基本介绍"><a href="#数据库的基本介绍" class="headerlink" title="数据库的基本介绍"></a>数据库的基本介绍</h1><p>数据库概述：<br>数据库:是以特定的结构批量存储数据的软件<br>其发展历史:网状数据库 –&gt; 层次数据库 –&gt; 关系数据库,而我们常使用的数据库为关系数据库<br>数据库的逻辑结构为: Server(服务器) –&gt; Database(数据库) –&gt; Table(表) –&gt; Row(行) –&gt; column(列)<br>日常开发中常用的关系数据库:SQlite –&gt; MySQL –&gt; PostgreSQL –&gt; Sql Server –&gt; Oracle –&gt; DB2<br>PS:Mysql是目前使用最多的数据库管理软件，并且开源免费。</p>
+<a id="more"></a>
+<hr>
+<h1 id="Mysql数据库的命令"><a href="#Mysql数据库的命令" class="headerlink" title="Mysql数据库的命令"></a>Mysql数据库的命令</h1><p>标准化的sql命令<br>DDl : Data Define Language 定义数据结构<br>    create/drop/alter</p>
+<p>DML : Data Munipulate Language 操作数据<br>     insert/ delete/ update</p>
+<p>DQL : Date Query Language 查询数据<br>    select </p>
+<p>DCL : Data Control Language 控制用户权限<br>    grant(授权)/revoke(收权)</p>
+<h2 id="1-Mysql的日常管理命令"><a href="#1-Mysql的日常管理命令" class="headerlink" title="1.Mysql的日常管理命令"></a>1.Mysql的日常管理命令</h2><p>show databases –&gt;查看显示服务器上的所有数据库        ps：进入数据库后才能使用此命令(mysql -uroot)<br>use “数据库名”  –&gt;使用并进入指定数据库<br>show tables；  –&gt;显示当前数据库中所有的数据表<br>quit;          –&gt;退出服务器的连接<br>desc “表名称”  –&gt;描述表中有哪些列</p>
+<h2 id="2-Mysql常用的sql命令"><a href="#2-Mysql常用的sql命令" class="headerlink" title="2.Mysql常用的sql命令"></a>2.Mysql常用的sql命令</h2><p>日常开发过程中的常用sql命令: 数据库的中的数据进行 “增删查改”-的基本操作<br>(1)向数据表中插入增加数据<br>insert into 表名 values(xx,xx,xx);<br>(2)删除表中的数据<br>delete from 表名 where 条件;<br>(3)查询表中的所有数据<br>select * from 表名;</p>
+<h2 id="3-Mysql数据库中创建数据库常用命令及规范"><a href="#3-Mysql数据库中创建数据库常用命令及规范" class="headerlink" title="3.Mysql数据库中创建数据库常用命令及规范"></a>3.Mysql数据库中创建数据库常用命令及规范</h2><p>(1)#设置客户端连接服务器端使用的编码为utf8<br>set names utf8;<br>(2)#如果此数据库已存在 丢弃删除它<br>drop database if exists 数据库名;<br>(3)创建新的数据库<br>create database 数据库名;<br>(4)使用进入数据库<br>use 数据库名;<br>(5)创建保存数据的表<br>create table 表名(<br>id int,<br>…<br>…<br>);</p>
+<p>PS:扩展 –&gt; 当前数据库行业的语言标准 分别为sql——87，sql——92，sql——99等，当前的标准的sql命令可以被绝大多数的关系型数据库所支持。<br>sql命令的两种执行方式<br>(1)交互模式：客户端输入一行，点击回车，服务器执行一行，适用于临时性的查看数据。<br>mysql -uroot 回车</p>
+<p>(2)脚本模式：酷划断吧要执行的命令写在一个文本文件中，一次性的提交给服务器执行，适用于批量的增删改查。<br>mysql -uroot &lt; ……..**.sql 脚本文件的路径 回车<br>注意：在脚本模式下查询会出现乱码，在交互模式下不会出现乱码</p>
+<p>sql的语法规范<br>(1)每条sql语句他必须以英文的分号;结尾,一条语句可以跨越多行，见到分行认为语句结束；<br>(2)若地N行语句错误，侧语句以及后续的语句都不能再执行。<br>(3)sql是不区分大小写的，习惯上数据库关键字大写，非关键字小写。<br>(4)sql命令还可以使用单行单行注释–&gt; #，多行注释–&gt; /**/，注释代码不会被服务器执行</p>
+<hr>
+<h1 id="Mysql中的列类型"><a href="#Mysql中的列类型" class="headerlink" title="Mysql中的列类型"></a>Mysql中的列类型</h1><h2 id="1-列中的数据类型"><a href="#1-列中的数据类型" class="headerlink" title="1. 列中的数据类型"></a>1. 列中的数据类型</h2><p>每个数据类型存储的字节数都不同，创建列时按照实际需求进行创建<br>1TB=1024GB 1GB=1024MB 1MB=1024KB 1KB=1024BYTE 1BYTR=8BIT<br>(1)数据类型<br>tinyint 微整形        占1个字节  范围-128~127<br>smallint 小整形     占1个字节  范围-32768~32767<br>int整形             占4个字节  范围-2147483648~2147483647<br>bigint大整形        占8个字节<br>float 单精度浮点型    占4个字节  范围3.4e38，范围笔int型大的多<br>double 双精度浮点型 占8个字节<br>decimal                (M,D)定点小数，不会产生计算的误差，M代表总的有效位数，D代表小数点后的有效位数<br>bool 布尔型            只有两个结果 true 1 / false 0 true和false不能添加引号；真正存储数据的时候，会使用tinyint<br>(2)日期时间类型<br>date 日期型  ‘2018-xx-xx’<br>time 时间型  ‘12:00:00’<br>datetime 日期时间型 ‘2018-xx-xx 12:00:00’<br>(3)字符串类型<br>varchar(M)    变长字符串，不会存在空间浪费，操作相对较慢，M最大值是65535<br>char(M)        定长字符串，可能存在空间浪费，操作相对较快，M在大值是255；一般用于存储手机号，身份证号等固定长度的字符<br>text(M)        大型边长字符串，最多存2G</p>
+<h2 id="2-列中的列约束"><a href="#2-列中的列约束" class="headerlink" title="2. 列中的列约束"></a>2. 列中的列约束</h2><p>1.列约束<br>(1)主键约束——————&gt; primary key<br>(2)唯一约束——————&gt; unique        可以为null<br>(3)非空约束——————&gt; not null        声明了非空约束的列上不能插入null<br>(4)默认值约束——————&gt; default “默认日期”<br>可以使用default 关键字声明默认值，有两种方式可以应用默认值<br>insert into xz_laptop_family values(40,’苹果’,default)<br>insert into xz_laptop_family (fid,fname) values(50,’华硕’)<br>(5)检查约束——————&gt; check<br>检查约束可以对插入的数据进行检验<br>CREATE TABLE student(<br>    age TINYINT CHECK(age&gt;=18 AND age&lt;=60)<br>);<br>MySQL不支持检查约束，会降低数据插入速度和更新等操作效率<br>(6)外键约束——————&gt; foreign key 外键应该对应主键<br>声明了外键的约束的列，取值必须在另一个表的主键列上面出现过，列类型要保持一致，取值可以使null<br>FOREIGN KEY (familyid)<br>    references xz_laptop_family(fid)<br>2.mysql中的自增列<br>    auto_increment：自动增长，加入一个声明了自增列，无需手动赋值，直接设置为null，会获取当前的最大值，然后加1插入<br>    ps：自增允许手动赋值<br>    只是适用于整数型的主键列上</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,57 +236,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/09/mysql学习总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/05/github-hexo博客搭建/" class="archive-article-date">
-  	<time datetime="2018-12-05T03:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/05/github-hexo博客搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Github+hexo博客搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/05/github-hexo博客搭建/">Github+hexo博客搭建</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github-hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -268,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
